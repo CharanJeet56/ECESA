@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Overview</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <style>
+      
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #f0f4f8, #e1e9ef);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+       
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(62, 58, 58, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(189, 11, 11, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+
+        .section-title {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .overview-container, .details-container {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .overview-container {
+            margin-right: 10px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card-value {
+            font-size: 2rem;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .card-description {
+            color: #555;
+        }
+
+        .text-content {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .text-content p {
+            margin-bottom: 10px;
+        }
+
+        
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .overview-container, .details-container {
+                flex: 1;
+                margin: 10px;
+            }
+
+            .overview-container {
+                margin-right: 20px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .container {
+                flex-direction: column;
+                margin: 10px; 
+                padding: 10px; 
+            }
+
+            .overview-container {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="overview-container">
+            <h1 class="section-title">Department Overview</h1>
+
+            <div class="card">
+                <div class="card-title">Established</div>
+                <div class="card-value" id="established-count">2001</div>
+                <div class="card-description">Year the department was established</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Intake</div>
+                <div class="card-value" id="intake-count">300 Students</div>
+                <div class="card-description">Current student intake</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Programs Offered</div>
+                <div class="card-value">B.Tech in ECE</div>
+                <div class="card-description">Undergraduate program offered</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title" >Faculty Members</div>
+                <div class="card-value" id="faculty-count">58 Total</div>
+                <div class="card-description">Including 10 Professors, 6 Associate Professors, 42 Assistant Professors</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">PhD Faculty</div>
+                <div class="card-value" id="phd-count">15</div>
+                <div class="card-description">Faculty members with PhD</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Special Labs</div>
+                <div class="card-value" id="lab-count">4+</div>
+                <div class="card-description">Labs for IoT, Robotics, etc.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Training Focus</div>
+                <div class="card-value">Pre-Placement Training</div>
+                <div class="card-description">Including Soft Skills, Technical Trainings, etc.</div>
+            </div>
+        </div>
+
+        <div class="details-container">
+            <h2 class="section-title">Department Details</h2>
+            <div class="text-content">
+                <p>The department of Electronics and Communication Engineering was established in the year 2001 with an intake of 60 students and the current intake is 300 students. The department offers an undergraduate program B.Tech in Electronics & Communication Engineering.</p>
+                <p>The department has highly qualified faculty with 10 Professors, 6 Associate Professors, and 42 Assistant Professors, including 15 Faculty members with PhDs.</p>
+                <p>The department is geared up with outcome-based education imparted to the students. Students at the department are consistently provided with opportunities to upgrade their technical knowledge and develop skills that make them the best employable, qualified for higher education, or develop them as strong entrepreneurs. The students are trained for Pre-Placement training concentrating on Soft skills, aptitude, Technical training, and Specialized Company-based training for placements.</p>
+                <p>The teaching faculty is actively engaged in research and they have published papers in SCI, Scopus, UGC approved, and other peer-reviewed journals. Faculty members regularly attend National/International conferences publishing and presenting papers. Faculty members are constantly encouraged to develop themselves through various FDPs, conferences, workshops, publications, R&D activities, and MOOCs exams. They are exposed to the latest technologies like IoT, Robotics, Solar applications, Machine Designing, etc., through special labs established by experts in these fields.</p>
+                <p>Special and technical training is also imparted to the students as a part of courses above the curriculum to make them excel in their career. The students are given exposure to coding, application development, and software to excel in their profession. The department classrooms are spacious with LCD projectors fitted for conducting e-lectures to make learning a better experience in the department. Google Classroom, Zoom, and other online platforms are extensively used to support the students beyond the classroom. The department labs are well established and well-equipped not only to support the curriculum prescribed by the University but also to enhance the students’ technical pursuit. Industrial visits are arranged for students over and above the curriculum. The department has a strong student ECE association, under its aegis, various co-curricular and extra-curricular activities are organized with the initiation of the students. The Institute has an IETE & IEEE Student's Chapter. The students actively participate in the various activities of IETE, IEEE, Hackathon, and TedX.</p>
+                <p>Students are also made industry-ready through various trainings, regular company internships, and industry-based mini and major projects.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        function countUp(elementId, endValue, duration) {
+            const element = document.getElementById(elementId);
+            let startValue = 0;
+            const step = endValue / (duration / 50);
+
+            function update() {
+                if (startValue < endValue) {
+                    startValue += step;
+                    element.innerText = Math.ceil(startValue);
+                    requestAnimationFrame(update);
+                } else {
+                    element.innerText = endValue;
+                }
+            }
+            update();
+        }
+
+        
+        countUp('intake-count', 300, 3000); 
+        countUp('established-count', 2001, 2500); 
+        countUp('faculty-count',58,3000)
+        countUp('phd-count',15,4000)
+        countUp('lab-count',5,5000)
+    </script>
+</body>
+</html>

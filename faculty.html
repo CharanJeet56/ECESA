@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #e0e0e0;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+    }
+    
+    .container {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    
+  
+    header {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #00695c;
+        color: #ffffff;
+        border-radius: 8px 8px 0 0;
+    }
+    
+    header h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
+    
+    header p {
+        margin: 5px 0;
+        font-size: 1.1rem;
+    }
+    
+  
+    #faculty-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    
+    .faculty-member {
+        background-color: #f0f4f4;
+        padding: 15px;
+        margin: 10px;
+        width: calc(40% - 1px);
+        box-shadow: 0 0 10px rgba(224, 223, 229, 0.321);
+        border-radius: 8px;
+        text-align: center;
+    }
+    
+    .faculty-member h2 {
+        margin: 10px 0;
+        font-size: 1.5rem;
+        color: #00695c;
+    }
+    
+    .faculty-member p {
+        margin: 5px 0;
+        color: #616161;
+    }
+    
+    
+    footer {
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 20px;
+        background-color: #00695c;
+        color: #ffffff;
+        border-radius: 0 0 8px 8px;
+    }
+    
+    footer p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+  
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #e0e0e0;
+          color: #333;
+          margin: 0;
+          padding: 0;
+          line-height: 1;
+      }
+      
+      .container {
+          max-width: 1000px;
+          margin: 20px auto;
+          padding: 20px;
+          background-color: #ffffff;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+      }
+      
+      header {
+          text-align: center;
+          padding: 20px 0;
+          background-color: #00695c;
+          color: #ffffff;
+          border-radius: 8px 8px 0 0;
+      }
+      
+      header h1 {
+          margin: 0;
+          font-size: 2rem;
+      }
+      
+      header p {
+          margin: 5px 0;
+          font-size: 1.1rem;
+      }
+      
+   
+      #faculty-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin-top: 20px;
+      }
+      
+      .faculty-member {
+          background-color: #f0f4f4;
+          padding: 15px;
+          margin: 10px;
+          width: calc(40% - 1px);
+          box-shadow: 0 0 10px rgba(224, 223, 229, 0.321);
+          border-radius: 8px;
+          text-align: center;
+      }
+      
+      .faculty-member h2 {
+          margin: 10px 0;
+          font-size: 1.5rem;
+          color: #00695c;
+      }
+      
+      .faculty-member p {
+          margin: 5px 0;
+          color: #616161;
+      }
+      
+  
+      footer {
+          text-align: center;
+          padding: 15px 0;
+          margin-top: 20px;
+          background-color: #00695c;
+          color: #ffffff;
+          border-radius: 0 0 8px 8px;
+      }
+      
+      footer p {
+          margin: 0;
+          font-size: 0.9rem;
+      }
+      
+     
+      @media (max-width: 768px) {
+          #faculty-list {
+              justify-content: center;
+          }
+          
+          .faculty-member {
+              width: calc(100% - 20px); 
+              margin: 10px 0; 
+          }
+      }
+
+  
+    </style>
+<body>
+    <div class="container">
+        <header>
+            <h1>Faculty Members</h1>
+            <p>Meet the distinguished faculty members of our department.</p>
+        </header>
+        
+        <section id="faculty-list">
+          
+            <div class="faculty-member">
+                <h2>Dr. S Maheswara Reddy</h2>
+                <p>Professor & HOD - 1</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Dr. Vikas Maheshwari</h2>
+                <p>Professor & HOD - 2</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Dr. B.Kedarnath</h2>
+                <p>Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Dr. Md. Rashid Mahmood</h2>
+                <p>Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Dr. S M K M Abbas Ahmad</h2>
+                <p>Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Prof.Anitha Swamidas</h2>
+                <p>Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Dr.A Mohan</h2>
+                <p>Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Dr.Santosh Kumar Dwivedi</h2>
+                <p>Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Dr.R.S.Dubey</h2>
+                <p>Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Dr Harpreet Kaur</h2>
+                <p>Associate Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Dr.Sandeep Patil</h2>
+                <p>Associate Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Dr. Anitha B</h2>
+                <p>Associate Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Dr.Raja Rao Ch</h2>
+                <p>Associate Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr.D. Surendra Rao</h2>
+                <p>Associate Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr.O Ravinder</h2>
+                <p>Associate Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Dr. B. Mythily Devi</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Dr.Komal Jaiswal</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr.N V S Murthy</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr.K Krishna Kumar</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr.Srinivas Nanda</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr.Ch Narasimhulu</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr.Santosh Kumar G</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr.D Naresh</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mrs. K. Ramyasree</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr. Rameshwar Rao AV</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mrs. A. Vinisha</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mrs. K. Nadiya</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr.V. Sai Babu</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr.K.Srinivas</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Ms. Manpreet Kaur</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mrs. Md. Anees</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mrs.M.Nagamani</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Ms.S.Rupa</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr.V.Yadaiah</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mrs. P Surekha</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr. P.Laxman</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr.R. Sandeep Reddy</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr. K. Anil Kumar</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mrs.R.Shashikala</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr.M.Ravinder</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr. Y. Srinivasa Rao</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mrs. N. Swapna</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr. Kunal Nag</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr. P Muni Guravaiah</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr.L.N.Krishna</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr. B. Venkat Reddy</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Ms. C.Narmada</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Mr. S.Kishore Krishna Kumar</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Ms. P. Lakshmi</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>K sathish</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>K. Hanuja</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>K. Shyam</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>B. Rahul</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>K H N V Satyanarayana</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>Ms.I.Rajani Kumari</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+            <div class="faculty-member">
+                <h2>A.Lavanya</h2>
+                <p>Assistant Professor</p>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>ECE Department</p>
+        </footer>
+    </div>
+</body>
+</html>

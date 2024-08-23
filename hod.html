@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOD Profile - Dr. S. Maheswara Reddy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #004d99;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            animation: fadeIn 2s;
+        }
+        header p {
+            margin: 5px 0;
+        }
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: #fff;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideIn 2s;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        .profile-photo {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            border: 4px solid #004d99;
+        }
+        .profile-info {
+            max-width: 600px;
+            text-align: justify;
+        }
+        .profile-info h2 {
+            color: #004d99;
+            margin-top: 0;
+        }
+        .message {
+            background: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 2s;
+            max-width: 900px;
+        }
+        .message h2 {
+            color: #004d99;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (min-width: 768px) {
+            .profile {
+                flex-direction: row;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .profile-photo {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+            .profile-info {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-photo {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .profile-info {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dr. S. Maheswara Reddy</h1>
+        <p>B.Tech, M. Tech, Ph.D., LMISTE</p>
+        <p>Professor & HOD-1, Department of ECE</p>
+        <p>Guru Nanak Institutions Technical Campus (Autonomous)</p>
+    </header>
+    
+    <section class="profile">
+        <img src="image/hod.webp" alt="Dr. S. Maheswara Reddy" class="profile-photo">
+        <div class="profile-info">
+            <p>Dr. S. Maheswara Reddy received his B.Tech. degree in Electronics and Communication Engineering from RVR & JC College of Engineering, Nagarjuna University, Guntur, Andhra Pradesh, India. He finished his M.Tech. in Electronics and Communication Engineering from JNTUH, Hyderabad, Telangana, India.</p>
+            <p>He completed his Ph.D. in Electronics and Communication Engineering from JNTUH, Hyderabad. Telangana, India. Presently he is working as a Professor & Head ECE Department in Guru Nanak Institutions Technical Campus, Hyderabad. He has a total teaching experience of more than 23 years. He is a member of professional bodies like ISTE.</p>
+            <p>He has published 12 papers in International Journals and 4 papers in International Conferences. He holds 02 Indian Patent Publications and 01 Australian Patent Grant.</p>
+        </div>
+    </section>
+    
+    <section class="message">
+        <h2>HOD Message</h2>
+        <p>Welcome to the department of Electronics & Communication Engineering at Guru Nanak Institutions Technical Campus, Ibrahimpatnam, R. R. District, Telangana. The Department was established in the year 2001 with the aim of providing leadership in the field of Electronics & Communication Engineering with an intake of 60 students, and the current intake is 300 students. We strive to train and empower our students who will make the world a better place by using the power of engineering principles, techniques, and systems.</p>
+        <p>The Department of ECE got NBA accredited twice in 2007, 2014 & 2022. The significant infrastructural design, well-equipped laboratories & hi-tech computers with high-speed internet facility with all qualified faculty members ensure world-class standard of education delivered from our department.</p>
+    </section>
+    
+    <script>
+        
+    </script>
+</body>
+</html>

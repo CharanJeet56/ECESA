@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <script type="text/javascript">
+        window.tailwind.config = {
+            darkMode: ['class'],
+            theme: {
+                extend: {
+                    colors: {
+                        border: 'hsl(var(--border))',
+                        input: 'hsl(var(--input))',
+                        ring: 'hsl(var(--ring))',
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        primary: {
+                            DEFAULT: 'hsl(var(--primary))',
+                            foreground: 'hsl(var(--primary-foreground))'
+                        },
+                        secondary: {
+                            DEFAULT: 'hsl(var(--secondary))',
+                            foreground: 'hsl(var(--secondary-foreground))'
+                        },
+                        destructive: {
+                            DEFAULT: 'hsl(var(--destructive))',
+                            foreground: 'hsl(var(--destructive-foreground))'
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(var(--muted))',
+                            foreground: 'hsl(var(--muted-foreground))'
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(var(--accent))',
+                            foreground: 'hsl(var(--accent-foreground))'
+                        },
+                        popover: {
+                            DEFAULT: 'hsl(var(--popover))',
+                            foreground: 'hsl(var(--popover-foreground))'
+                        },
+                        card: {
+                            DEFAULT: 'hsl(var(--card))',
+                            foreground: 'hsl(var(--card-foreground))'
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            :root {
+                --background: 0 0% 8%;
+                --foreground: 240 10% 3.9%;
+                --card: 0 0% 100%;
+                --card-foreground: 240 10% 3.9%;
+                --popover: 0 0% 100%;
+                --popover-foreground: 240 10% 3.9%;
+                --primary: 240 5.9% 10%;
+                --primary-foreground: 0 0% 98%;
+                --secondary: 240 4.8% 95.9%;
+                --secondary-foreground: 240 5.9% 10%;
+                --muted: 240 4.8% 95.9%;
+                --muted-foreground: 240 3.8% 46.1%;
+                --accent: 240 4.8% 95.9%;
+                --accent-foreground: 240 5.9% 10%;
+                --destructive: 0 84.2% 60.2%;
+                --destructive-foreground: 0 0% 98%;
+                --border: 240 5.9% 90%;
+                --input: 240 5.9% 90%;
+                --ring: 240 5.9% 10%;
+                --radius: 0.5rem;
+            }
+            .dark {
+                --background: 240 10% 3.9%;
+                --foreground: 0 0% 98%;
+                --card: 240 10% 3.9%;
+                --card-foreground: 0 0% 98%;
+                --popover: 240 10% 3.9%;
+                --popover-foreground: 0 0% 98%;
+                --primary: 0 0% 98%;
+                --primary-foreground: 240 5.9% 10%;
+                --secondary: 240 3.7% 15.9%;
+                --secondary-foreground: 0 0% 98%;
+                --muted: 240 3.7% 15.9%;
+                --muted-foreground: 240 5% 64.9%;
+                --accent: 240 3.7% 15.9%;
+                --accent-foreground: 0 0% 98%;
+                --destructive: 0 62.8% 30.6%;
+                --destructive-foreground: 0 0% 98%;
+                --border: 240 3.7% 15.9%;
+                --input: 240 3.7% 15.9%;
+                --ring: 240 4.9% 83.9%;
+            }
+        }
+        .glassmorphic {
+            backdrop-filter: blur(10px) brightness(90%);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-primary-foreground min-h-screen p-8">
+    <div class="glassmorphic p-8 rounded-lg shadow-lg">
+        <h1 class="text-4xl font-bold mb-6 text-center text-green-100">Academics</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-gradient-to-r from-blue-400 to-blue-600 p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <a href="syllabus.html">
+                    <h2 class="text-xl font-semibold mb-2">Syllabus</h2>
+                    <img src="https://openui.fly.dev/openui/300.svg?text=Subject+Notes" alt="Syllabus" class="w-full h-48 object-cover rounded-lg mb-2">
+                    <a href="syllabus.html" class="text-white hover:underline">View Syllabus</a>
+                </a>
+            </div>
+            <div class="bg-gradient-to-r from-green-400 to-green-600 p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <a href="subjectnotes.html">
+                    <h2 class="text-xl font-semibold mb-2">Subject Notes</h2>
+                    <img src="https://openui.fly.dev/openui/300.svg?text=Subject+Notes" alt="Subject Notes" class="w-full h-48 object-cover rounded-lg mb-2">
+                    <a href="subjectnotes.html" class="text-white hover:underline">View Notes</a>
+                </a>
+            </div>
+            <div class="bg-gradient-to-r from-purple-400 to-purple-600 p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <a href="handbooks.html">
+                    <h2 class="text-xl font-semibold mb-2">Handbooks</h2>
+                    <img src="https://openui.fly.dev/openui/300.svg?text=Handbooks" alt="Handbooks" class="w-full h-48 object-cover rounded-lg mb-2">
+                    <a href="handbooks.html" class="text-white hover:underline">View Handbooks</a>
+                </a>
+            </div>
+            <div class="bg-gradient-to-r from-red-400 to-red-600 p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <a href="projects.html">
+                    <h2 class="text-xl font-semibold mb-2">Projects</h2>
+                    <img src="https://openui.fly.dev/openui/300.svg?text=Subject+Notes" alt="Projects" class="w-full h-48 object-cover rounded-lg mb-2">
+                    <a href="projects.html" class="text-white hover:underline">View Projects</a>
+                </a>
+            </div>
+            <div class="bg-gradient-to-r from-indigo-400 to-indigo-600 p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <a href="gate.html">
+                    <h2 class="text-xl font-semibold mb-2">GATE</h2>
+                    <img src="https://openui.fly.dev/openui/300.svg?text=GATE" alt="GATE" class="w-full h-48 object-cover rounded-lg mb-2">
+                    <a href="gate.html" class="text-white hover:underline">GATE Resources</a>
+                </a>
+            </div>
+            <div class="bg-gradient-to-r from-pink-400 to-pink-600 p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <a href="https://gurunanak.packetprep.com/test/prctrx2256fd">
+                    <h2 class="text-xl font-semibold mb-2">Placement Preparation</h2>
+                    <img src="https://openui.fly.dev/openui/300.svg?text=Pre+Placement+Data" alt="Pre Placement Data" class="w-full h-48 object-cover rounded-lg mb-2">
+                    <a href="https://gurunanak.packetprep.com/test/prctrx2256fd" class="text-white hover:underline">View Placement Data</a>
+                </a>
+            </div>
+            <div class="bg-gradient-to-r from-yellow-400 to-yellow-600 p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <a href="PDFS/gre.pdf" target="_blank">
+                    <h2 class="text-xl font-semibold mb-2">GRE</h2>
+                    <img src="https://openui.fly.dev/openui/300.svg?text=GRE" alt="GRE" class="w-full h-48 object-cover rounded-lg mb-2">
+                    <a href="#" class="text-white hover:underline">GRE Resources</a>
+                </a>
+            </div>
+            <div class="bg-gradient-to-r from-teal-400 to-teal-600 p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <a href="PDFS/toefl.pdf" target="_blank>
+                    <h2 class="text-xl font-semibold mb-2">TOEFL</h2>
+                    <img src="https://openui.fly.dev/openui/300.svg?text=TOEFL" alt="TOEFL" class="w-full h-48 object-cover rounded-lg mb-2">
+                    <a href="#" class="text-white hover:underline">TOEFL Resources</a>
+                </a>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>

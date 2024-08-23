@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .tabs {
+            display: flex;
+            cursor: pointer;
+            margin: 20px 0;
+            border-bottom: 2px solid #ccc;
+        }
+        .tab {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            background: #eaeaea;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .tab:hover {
+            background: #ddd;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        .active-tab {
+            background: #fff;
+            border-bottom: 1px solid #fff;
+        }
+        .active-content {
+            display: block;
+        }
+        .video-container {
+            margin: 20px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .tab-content {
+            animation: fadeIn 1s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active-tab" onclick="openTab(event, 'project1')">Project 1</div>
+            <div class="tab" onclick="openTab(event, 'project2')">Project 2</div>
+            <div class="tab" onclick="openTab(event, 'project3')">Project 3</div>
+        </div>
+
+        <div id="project1" class="tab-content active-content">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LwZ35wZJreU?si=JB8QyiUG3P5Sum_i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div id="project2" class="tab-content">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Vfkfh4r9GM8?si=qseFhf-RlHgalvnA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div id="project3" class="tab-content">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Whtkapt5nt4?si=zk8GDZLt4jw9FDYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabId) {
+            var i, tabcontent, tabs;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active-content");
+            }
+            tabs = document.getElementsByClassName("tab");
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active-tab");
+            }
+            document.getElementById(tabId).classList.add("active-content");
+            evt.currentTarget.classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>

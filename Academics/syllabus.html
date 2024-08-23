@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <script type="text/javascript">
+        window.tailwind.config = {
+            darkMode: ['class'],
+            theme: {
+                extend: {
+                    colors: {
+                        border: 'hsl(var(--border))',
+                        input: 'hsl(var(--input))',
+                        ring: 'hsl(var(--ring))',
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        primary: {
+                            DEFAULT: 'hsl(var(--primary))',
+                            foreground: 'hsl(var(--primary-foreground))'
+                        },
+                        secondary: {
+                            DEFAULT: 'hsl(var(--secondary))',
+                            foreground: 'hsl(var(--secondary-foreground))'
+                        },
+                        destructive: {
+                            DEFAULT: 'hsl(var(--destructive))',
+                            foreground: 'hsl(var(--destructive-foreground))'
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(var(--muted))',
+                            foreground: 'hsl(var(--muted-foreground))'
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(var(--accent))',
+                            foreground: 'hsl(var(--accent-foreground))'
+                        },
+                        popover: {
+                            DEFAULT: 'hsl(var(--popover))',
+                            foreground: 'hsl(var(--popover-foreground))'
+                        },
+                        card: {
+                            DEFAULT: 'hsl(var(--card))',
+                            foreground: 'hsl(var(--card-foreground))'
+                        },
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-in': 'slideIn 0.5s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideIn: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            :root {
+                --background: 0 0% 100%;
+                --foreground: 240 10% 3.9%;
+                --card: 0 0% 100%;
+                --card-foreground: 240 10% 3.9%;
+                --popover: 0 0% 100%;
+                --popover-foreground: 240 10% 3.9%;
+                --primary: 240 5.9% 10%;
+                --primary-foreground: 0 0% 98%;
+                --secondary: 240 4.8% 95.9%;
+                --secondary-foreground: 240 5.9% 10%;
+                --muted: 240 4.8% 95.9%;
+                --muted-foreground: 240 3.8% 46.1%;
+                --accent: 240 4.8% 95.9%;
+                --accent-foreground: 240 5.9% 10%;
+                --destructive: 0 84.2% 60.2%;
+                --destructive-foreground: 0 0% 98%;
+                --border: 240 5.9% 90%;
+                --input: 240 5.9% 90%;
+                --ring: 240 5.9% 10%;
+                --radius: 0.5rem;
+            }
+            .dark {
+                --background: 240 10% 3.9%;
+                --foreground: 0 0% 98%;
+                --card: 240 10% 3.9%;
+                --card-foreground: 0 0% 98%;
+                --popover: 240 10% 3.9%;
+                --popover-foreground: 0 0% 98%;
+                --primary: 0 0% 98%;
+                --primary-foreground: 240 5.9% 10%;
+                --secondary: 240 3.7% 15.9%;
+                --secondary-foreground: 0 0% 98%;
+                --muted: 240 3.7% 15.9%;
+                --muted-foreground: 240 5% 64.9%;
+                --accent: 240 3.7% 15.9%;
+                --accent-foreground: 0 0% 98%;
+                --destructive: 0 62.8% 30.6%;
+                --destructive-foreground: 0 0% 98%;
+                --border: 240 3.7% 15.9%;
+                --input: 240 3.7% 15.9%;
+                --ring: 240 4.9% 83.9%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-foreground font-sans antialiased">
+    <div class="flex flex-col md:flex-row h-screen p-6 space-y-4 md:space-y-0 md:space-x-4 animate-fade-in">
+        <div class="w-full md:w-1/4 bg-card p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 animate-slide-in">
+            <h2 class="text-2xl font-bold text-primary mb-4">Regulations</h2>
+            <ul class="space-y-3" id="regulations-list">
+                <li class="cursor-pointer hover:text-accent transition duration-200 bg-muted p-2 rounded-md" data-regulation="R21">R21</li>
+                <li class="cursor-pointer hover:text-accent transition duration-200 bg-muted p-2 rounded-md" data-regulation="R22">R22</li>
+            </ul>
+        </div>
+        
+        <div class="w-full md:w-1/4 bg-card p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 animate-slide-in hidden" id="subjects-container">
+            <h2 class="text-2xl font-bold text-primary mb-4">Semesters</h2>
+            <ul class="space-y-3" id="subjects-list"></ul>
+        </div>
+        
+        <div class="w-full md:w-1/2 bg-card p-6 rounded-lg shadow-lg transition-opacity duration-500 opacity-0 animate-fade-in">
+            <h2 class="text-2xl font-bold text-primary mb-4">Document Preview</h2>
+            <iframe src="#" id="document-frame" class="w-full h-full rounded-lg border border-muted" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script>
+        const regulationsList = document.getElementById('regulations-list');
+const subjectsContainer = document.getElementById('subjects-container');
+const subjectsList = document.getElementById('subjects-list');
+const documentFrame = document.getElementById('document-frame');
+
+const semesters = {
+    R21: {
+        '2-1': './PDFS/2-1_R21.pdf',
+        '2-2': './PDFS/2-2_R21.pdf',
+        '3-1': './PDFS/3-1_R21.pdf',
+        '3-2': './PDFS/3-2_R21.pdf',
+        '4-1': './PDFS/4-1_R21.pdf',
+        '4-2': './PDFS/4-2_R21.pdf',
+    },
+    R22: {
+        '2-1': './PDFS/2-1_R22.pdf',
+        '2-2': './PDFS/2-2_R22.pdf',
+        '3-1': './PDFS/3-1_R22.pdf',
+    }
+};
+
+
+
+regulationsList.addEventListener('click', (event) => {
+    const regulation = event.target.dataset.regulation;
+    if (regulation) {
+        const semesterList = Object.keys(semesters[regulation] || {});
+        subjectsList.innerHTML = semesterList.map(sem => 
+            `<li class="cursor-pointer hover:text-accent transition duration-200 bg-muted p-2 rounded-md animate-slide-in" data-semester="${sem}">${sem}</li>`
+        ).join('');
+        subjectsContainer.classList.remove('hidden');
+        subjectsContainer.classList.add('animate-fade-in');
+    }
+});
+
+subjectsList.addEventListener('click', (event) => {
+    const semester = event.target.dataset.semester;
+    const regulation = regulationsList.querySelector('.hover\\:text-accent').dataset.regulation;
+    if (semester && regulation) {
+        const pdfPath = semesters[regulation][semester];
+        console.log("PDF Path:", pdfPath); // Add this line to debug
+        if (pdfPath) {
+            documentFrame.src = pdfPath;
+        }
+    }
+});
+
+    </script>
+</body>
+</html>

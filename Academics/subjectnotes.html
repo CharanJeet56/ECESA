@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <style type="text/tailwindcss">
+    @layer base {
+      :root {
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 240 5.9% 10%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+        --ring: 240 5.9% 10%;
+        --radius: 0.5rem;
+      }
+      .dark {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+      }
+    }
+    .pdf-container {
+      display: flex;
+      gap: 1rem;
+    }
+    .pdf-list {
+      flex: 1;
+      overflow-y: auto;
+    }
+    .pdf-viewer {
+      flex: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="min-h-screen bg-background text-foreground flex flex-col items-center p-4">
+    <header class="w-full max-w-4xl mx-auto my-8">
+      <h1 class="text-5xl font-bold text-center mb-4 text-primary">Subject Notes</h1>
+      <div class="relative w-full">
+        <input type="text" id="search" placeholder="Search notes by subject name..." class="w-full p-3 border border-input rounded-lg bg-card text-card-foreground focus:ring-2 focus:ring-primary focus:outline-none transition duration-300 ease-in-out shadow-md" />
+        <button class="absolute right-3 top-3 bg-accent text-accent-foreground p-2 rounded-lg hover:bg-accent/80 transition duration-300 ease-in-out shadow-lg">
+          <img aria-hidden="true" alt="search-icon" src="https://openui.fly.dev/openui/24x24.svg?text=🔍" />
+        </button>
+      </div>
+    </header>
+    <main class="w-full max-w-4xl mx-auto pdf-container">
+      <div class="pdf-list bg-secondary text-secondary-foreground p-4 rounded-lg shadow-lg">
+
+        <div class="bg-secondary text-secondary-foreground p-4 rounded-lg shadow-lg cursor-pointer note transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl" data-pdf-url=".\PDFS\java.pdf">
+          <h2 class="text-3xl font-semibold mb-2">The JAVA Programming</h2>
+          <p class="text-muted-foreground">JAVA-QB By D CharanJeet</p>
+        </div>
+
+        <div class="bg-secondary text-secondary-foreground p-4 rounded-lg shadow-lg cursor-pointer note transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl" data-pdf-url=".\PDFS\dsa.pdf">
+          <h2 class="text-3xl font-semibold mb-2">Data Structures and Algorithms</h2>
+          <p class="text-muted-foreground">Detailed notes for DSA.</p>
+        </div>
+
+        <div class="bg-secondary text-secondary-foreground p-4 rounded-lg shadow-lg cursor-pointer note transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl" data-pdf-url=".\PDFS\mca.pdf">
+          <h2 class="text-3xl font-semibold mb-2">Microcontrollers</h2>
+          <p class="text-muted-foreground">Comprehensive notes for MPMC.</p>
+        </div>
+
+        <div class="bg-secondary text-secondary-foreground p-4 rounded-lg shadow-lg cursor-pointer note transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl" data-pdf-url=".\PDFS\c.pdf">
+          <h2 class="text-3xl font-semibold mb-2">C Programming Notes</h2>
+          <p class="text-muted-foreground">Notes for C Language.</p>
+        </div>
+
+        <div class="bg-secondary text-secondary-foreground p-4 rounded-lg shadow-lg cursor-pointer note transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl" data-pdf-url=".\PDFS\DSP.pdf">
+          <h2 class="text-3xl font-semibold mb-2">Digital Signal Processing</h2>
+          <p class="text-muted-foreground">DSP Notes By Dr. Rashid Mahmood.</p>
+        </div>
+
+        <div class="bg-secondary text-secondary-foreground p-4 rounded-lg shadow-lg cursor-pointer note transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl" data-pdf-url=".\PDFS\reactjs.pdf">
+          <h2 class="text-3xl font-semibold mb-2">React JS</h2>
+          <p class="text-muted-foreground">Complete React JS Notes</p>
+        </div>
+
+
+
+        
+      </div>
+      <aside class="pdf-viewer">
+        <iframe id="pdf-viewer" class="w-full h-full border border-input rounded-lg shadow-lg" src="" frameborder="0"></iframe>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('search').addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      const notes = document.querySelectorAll('.pdf-list .note');
+      notes.forEach(note => {
+        const subject = note.querySelector('h2').textContent.toLowerCase();
+        if (subject.includes(query)) {
+          note.style.display = 'block';
+        } else {
+          note.style.display = 'none';
+        }
+      });
+    });
+    
+    document.querySelectorAll('.note').forEach(note => {
+      note.addEventListener('click', function() {
+        const pdfUrl = this.getAttribute('data-pdf-url');
+        document.getElementById('pdf-viewer').src = pdfUrl;
+      });
+    });
+  </script>
+</body>
+</html>
